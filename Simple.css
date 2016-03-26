@@ -1,124 +1,171 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain) */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset,form, label, legend,table, caption, tbody, tfoot, thead, tr, th,td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
-}
+	vertical-align: baseline;}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;} blockquote, q {quotes: none;}blockquote:before,blockquote:after,q:before, q:after {content: '';content: none;}table {border-collapse:collapse;border-spacing: 0;}
+
+/* --------------------------------- Element slectors ---------------------- */
+
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+}
+img{
 	display: block;
+	float: left;
+	height: 50%;
 }
-body {
-	line-height: 1;
+a{
+	color: #000000;
+	text-decoration: none;
 }
-ol, ul {
-	list-style: none;
+#container{
+	height: 300%;
+	width: 100%;
 }
-blockquote, q {
-	quotes: none;
+#navbar{
+	position: relative;
+	top:35%;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+#title{
+	position: relative;
+	height: 10%;
+	width: auto;
+	top: 35%;
+	padding: 2%;
 
-/* --------------------------------- My CSS ------------------------------------ */
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	text-align: center;
+	color: #C3D5C5;
 
-@media screen and (max-width: 700px) {
-	html, body{
-		height: 100%;
-		width: 100%;
-		margin: auto;
-  		max-width: 700px;
-
-	}
-
-	.pagepic{
+	background-color: black;
+	opacity: 0.75;
+}
+#about{
+		display: block;
+		float: left;
+		margin: 5% 5% 5% 5%;
+		clear: right;
+}
+#about h3 {
+	text-align: left;
+	text-transform: uppercase;
+	color: #B72C15;
+	font-family: 'Playfair Display', serif;
+}
+#about p {
+	text-indent: 10%;
+	text-align: center;
+}
+#who{
+	text-align: left;
+}
+#down{
+	position: absolute;
+	right: 5%;
+	bottom: 5%;
+}
+#top{
+	position: relative;
+	margin-left: 5%;
+	top: 2%;
+}
+#bottom{
+	position: relative;
+	float: right;
+	top: 2%;
+	margin-right: 2%;
+}
+#back{
+	position: relative;
+	float: left;
+	top: 40%;
+	margin-left: 5%;
+}
+#divimg{
+	display: inline-block;
+	float: left;
+	height: 50%;
+	margin: 5%;
+}
+.pagepic{
 		height: 33.4%;
 		background: url("Pictures/ChicagoFall.jpg") fixed no-repeat;
 		background-size: 100% 100%;
-	}
-
-	.page{
+}
+.page{
 		height: 33.4%;
 		background-color: black;
 		clear: both;
-	}
-
-	.header{
+}
+.header{
 		text-align: center;
 		font-weight: bold;
 		color: #B72C15;
 		font-family: 'Playfair Display', serif;
 		font-weight: 400;
+}
+.button {
+	background-color:#eae0c2;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:2px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color: #000000;
+	font-weight:bold;
+	padding:8px 12px;
+}
+.button:hover {
+	background-color:#ccc2a6;
+}
+@media screen and (max-width: 630px){
+	html, body{
+		max-width: 630px;
 	}
-
-	#container{
-		height: 300%;
-		width: 100%;
+	.pagepic{
+		height: 33.4%;
+		background: url("Pictures/MB2.jpg") fixed no-repeat;
+		background-size: 100% 100%;
 	}
-
-	#title{
-		position: relative;
-		height: 20%;
-		width: auto;
-		top: 35%;
-
-		font-family: 'Playfair Display', serif;
-		font-weight: 700;
-		font-size: 180%;
-		text-align: center;
-		color: #C3D5C5;
-
-		background-color: black;
-		opacity: 0.75;
-	}
-
-	#photo{
-		display: block;
-		float: left;
-		height: 50%;
-		width: 100%;
-		margin: 5% 2.5% 10% 5%;
+	img{
+		display: inline-block;
+		margin-top: 5%;
+		margin-left: 5%;
+		max-width: 300px;
 		clear: both;
+		height: 100%
 	}
-
-	#photo img{}
-
+	#divimg{
+		height: 40%;
+	}
+	#title {
+		line-height: 1.5em;
+		font-size: 200%
+	}
 	#about{
-		display: block;
-		float: left;
 		height: 35%;
-		width: 100%;
-		margin: 5% 5% 0 5%;
-		color: green;
+		font-size: 100%;
+		margin: 5% 0 0 5%;
+		color: #FFFFFF;
 		clear: both;
-		
 	}
-
+	#top{
+		float: left;
+		margin: 0.1em;
+	}
+	#bottom{
+		top: 2%;
+		margin: 0.1em;
+	}
 	.page3{
 		position: relative;
 		float: left;
@@ -136,81 +183,58 @@ table {
 		background-color: black;
 		opacity: 0.8;
 	}
-	
 }
-
-@media screen and (min-width: 700px) {
-	html, body{
-		height: 100%;
-		width: 100%;
-		margin: 0px;
-		padding: 0px;
-		max-width: 2000px;
-
-	}
-
-	.pagepic{
-		height: 33.3%;
-		background: url("Pictures/ChicagoFall.jpg") fixed no-repeat;
-		background-size: 100% 100%;
-	}
-
-	.page{
-		height: 33.4%;
-		background-color: black;
-		clear: both;
-	}
-
-	.header{
-		text-align: center;
-		font-weight: bold;
-		color: #B72C15;
-		font-family: 'Playfair Display', serif;
-		font-weight: 400;
-	}
-
-	#container{
-		height: 300%;
-		width: 100%;
-	}
-
-	#title{
+@media screen and (min-width: 630px) {
+	img{
 		position: relative;
-		height: 20%;
-		width: auto;
-		top: 35%;
-
-		font-family: 'Playfair Display', serif;
-		font-weight: 700;
-		font-size: 250%;
-		text-align: center;
-		color: #C3D5C5;
-		
-		background-color: black;
-		opacity: 0.75;
+		top: 20%;
+		height: auto;
+		max-height: 325px;
+		max-width: 350px;
+		margin: 5% 2.5% 0% 5%;
+		clear: none;
 	}
+	#divimg{
+		top: 20%;
 
-	#photo{
-		display: block;
-		float: left;
-		height: 50%;
-		width: 35%;
-		margin: 5% 2.5% 5% 5%;
 	}
-
-	#photo img{}
-
+	#title{
+		font-size: 400%
+	}
 	#about{
-		display: block;
-		float: left;
-		height: 50%;
-		width: 45%;
+		position: relative;
+		top: 15%;
+		height: 30%;
+		width: 35%;
+		height: auto;
+		max-height: 350px;
 		margin: 5% 5% 5% 5%;
 		color: white;
 		clear: right;
-		
+		line-height: 1.4em;
+		font-size: 98%
 	}
+	#down{
+		position: absolute;
+		bottom: 5%;
+	}
+	#top{
+		float: left;
+		top: 20%;
+		clear: left;
+	}
+	#bottom{
+		float: left;
+		top: 20%;
+		left: 65%;
+	}
+	#back{
+		position: relative;
+		top: 60%;
+		right: 45%;
+		bottom: 2em;
 
+	}
 	.page3{
 		position: relative;
 		float: left;
@@ -227,5 +251,56 @@ table {
 		left: 30%;
 		background-color: black;
 		opacity: 0.8;
+	}
+}
+@media screen and (min-width: 900px) {
+	img{
+		position: relative;
+		top: 10%;
+		height: auto;
+		max-height: 450px;
+		max-width: 450px;
+		margin: 5% 2.5% 0% 5%;
+		clear: none;
+	}
+	#about{
+		top: 15%;
+		height: 60%;
+		max-height: 800px;
+		margin: 5% 5% 0% 5%;
+		text-align: right;
+		line-height: 1.5em;
+		font-size: auto;
+		word-wrap: break-all;			
+	}
+	#down{
+		right: 2%
+	}
+	#top{
+		top: 15%;
+		left: 5%;
+		right: 0;
+		margin: 0;
+		clear: left;
+	}
+	#bottom{
+		top: 15%;
+		left: 75%; 
+		right: 0;
+		margin: 0;
+	}
+	#back{
+		position: relative;
+		top: 60%;
+		right: 45%;
+		bottom: 2em;
+	}
+	.page3{
+		top: 10%;
+		height: 15%;
+		line-height: 1.32em;
+	}
+	.header{
+		font-size: 130%;
 	}
 }
